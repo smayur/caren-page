@@ -238,7 +238,7 @@ sub { bottom: -.25em; }
 
   .navbar {width: 100%;}
 
-  .header-media-icons, .menu {
+  .header-media-icons {
     display: flex;
     justify-content: flex-end;
     text-transform: uppercase;
@@ -409,14 +409,7 @@ sub { bottom: -.25em; }
     transform: translate(-50%, -50%);
     text-align: center;
     text-transform: uppercase;
-  }
-
-  .hover-content {
-    width: 20px;
-  }
-
-  .hover-content img{
-    width: 100%;
+    cursor: pointer;
   }
 
   .text::after {
@@ -427,4 +420,74 @@ sub { bottom: -.25em; }
 
 /* ==========================================================================
    portfolio ends
+   ========================================================================== */
+
+/* ==========================================================================
+   Footer ends
+   ========================================================================== */
+
+  footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  footer .wrapper {
+    width: calc(71% - 4px);
+    padding: 25px 0 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-media-icons, .footer-menu {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+
+  .footer-media-icons {
+    margin-bottom: 5px;
+    font-size: 12px;
+    align-items: flex-end;
+  }
+
+  .footer-media-icons .media-icons {
+    width: 22.5%;
+    padding: 2px 0;
+    background-image: url(/assets/images/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
+    cursor: pointer;
+  }
+
+  .footer-media-icons .media-icons:hover {background-position: 0 -59px;}
+
+  .footer-menu li a {font-size: 14px;}
+
+  .footer-menu li a:hover {color: #E21A8E;}
+
+  .footer-menu li:first-child {
+    width: 16px;
+    background-image: url(/assets/images/home-icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .footer-menu li:first-child:hover {
+    background-image: url(/assets/images/sprite.png);
+    background-position: 0 -17px;
+  }
+
+  .footer-menu li:nth-child(2) {margin-left: 16px;}
+
+  .footer-menu li:not(:first-child):not(:last-child)::after {
+    content: '|';
+    margin: 0 8px;
+    display: inline;
+    font-size: 16px;
+  }
+
+/* ==========================================================================
+   Footer ends
    ========================================================================== */
