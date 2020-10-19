@@ -375,7 +375,55 @@ sub { bottom: -.25em; }
     flex-wrap: wrap;
   }
 
-  .port-images li {margin: 8px 5px;}
+  .port-images>li {
+    position: relative;
+    margin: 8px 5px;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .port-images>li:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    display: flex;
+  }
+  
+  .text {
+    color: #E21A8E;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .hover-content {
+    width: 20px;
+  }
+
+  .hover-content img{
+    width: 100%;
+  }
+
+  .text::after {
+    content: url('/assets/images/home-content-hover.png');
+    margin-left: 10px;
+    display: inline-block;
+  }
 
 /* ==========================================================================
    portfolio ends
