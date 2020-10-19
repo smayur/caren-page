@@ -172,7 +172,7 @@ sub { bottom: -.25em; }
     overflow: hidden;
   }
 
-  .wrapper{
+  .wrapper {
     max-width: 1366px;
     margin: 0 auto;
     display: flex;
@@ -234,13 +234,9 @@ sub { bottom: -.25em; }
     transition: .3s ease;
   }
 
-  .logo a:hover {
-    color: #E21A8E;
-  }
+  .logo a:hover {color: #E21A8E;}
 
-  .navbar {
-    width: 100%;
-  }
+  .navbar {width: 100%;}
 
   .header-media-icons, .menu {
     display: flex;
@@ -254,17 +250,11 @@ sub { bottom: -.25em; }
     align-items: flex-end;
   }
 
-  .header-media-icons li:not(:first-child) {
-    margin-left: 5px;
-  }
+  .header-media-icons li:not(:first-child) {margin-left: 5px;}
 
-  .header-media-icons li:nth-child(2) {
-    margin-left: 20px;
-  }
+  .header-media-icons li:nth-child(2) {margin-left: 20px;}
 
-  .search-bar {
-    width: 15%;
-  }
+  .search-bar {width: 15%;}
 
   input[type="search" i] {
     width: 100%;
@@ -321,14 +311,12 @@ sub { bottom: -.25em; }
 
   .banner {
     width: 100%;
-    padding: 320px 0;
+    padding: 300px 0;
     background: url(/assets/images/banner.jpg);
     background-repeat: no-repeat;
   }
 
-  .banner .wrapper {
-    width: 89%;
-  }
+  .banner .wrapper {width: 89%;}
 
   .arrows {
     width: 100%;
@@ -336,7 +324,7 @@ sub { bottom: -.25em; }
     justify-content: space-between;
   }
 
-  .arrows li a{
+  .arrows li a {
     width: 10px;
     padding: 27px 10px;
     background-image: url(/assets/images/sprite.png);
@@ -363,14 +351,32 @@ sub { bottom: -.25em; }
 
   .nav-disk li:nth-child(1) a, 
   .nav-disk li:nth-child(3) a, 
-  .nav-disk li:nth-child(4) a {
-    background-image: url(/assets/images/ellipse.png);
-  }
+  .nav-disk li:nth-child(4) a {background-image: url(/assets/images/ellipse.png);}
  
-  .nav-disk li:nth-child(2) a{
-    background-image: url(/assets/images/Ellipse2.png);
-  }
+  .nav-disk li:nth-child(2) a {background-image: url(/assets/images/Ellipse2.png);}
 
 /* ==========================================================================
    Banner ends
+   ========================================================================== */
+
+/* ==========================================================================
+   portfolio starts
+   ========================================================================== */
+
+  .portfolio {width: 100%;}
+
+  .portfolio .wrapper {
+    width: calc(66% - 34px);
+    padding: 40px 0 50px 0;
+  }
+
+  .port-images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .port-images li {margin: 8px 5px;}
+
+/* ==========================================================================
+   portfolio ends
    ========================================================================== */
