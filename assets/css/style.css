@@ -314,3 +314,63 @@ sub { bottom: -.25em; }
 /* ==========================================================================
    Header ends
    ========================================================================== */
+
+/* ==========================================================================
+   Banner starts
+   ========================================================================== */
+
+  .banner {
+    width: 100%;
+    padding: 320px 0;
+    background: url(/assets/images/banner.jpg);
+    background-repeat: no-repeat;
+  }
+
+  .banner .wrapper {
+    width: 89%;
+  }
+
+  .arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .arrows li a{
+    width: 10px;
+    padding: 27px 10px;
+    background-image: url(/assets/images/sprite.png);
+    background-repeat: no-repeat;
+  }
+
+  .arrows .left-arrow a {background-position: 0 -160px;}
+
+  .arrows .right-arrow a {background-position: -30px -160px;}
+
+  .nav-disk {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-disk li a {
+    width: 10px;
+    padding: 10px 3px;
+    background-repeat: no-repeat;
+  }
+
+  .nav-disk li:nth-child(1) a, 
+  .nav-disk li:nth-child(3) a, 
+  .nav-disk li:nth-child(4) a {
+    background-image: url(/assets/images/ellipse.png);
+  }
+ 
+  .nav-disk li:nth-child(2) a{
+    background-image: url(/assets/images/Ellipse2.png);
+  }
+
+/* ==========================================================================
+   Banner ends
+   ========================================================================== */
