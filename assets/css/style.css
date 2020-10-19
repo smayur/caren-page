@@ -155,3 +155,118 @@ sub { bottom: -.25em; }
   font-style: normal;
   font-weight: bold;
 }
+
+/* ==========================================================================
+   common styling starts
+   ========================================================================== */
+
+  :root {
+    --main-color: #ffffff;
+    --time: .2s ease-in-out;
+  }
+
+  body {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+
+  .wrapper{
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+  }
+
+  li, a {
+    display: inline-block;
+    color: #ffffff;
+  }
+
+  a {text-decoration: none;}
+
+  li {list-style-type: none;}
+
+/* ==========================================================================
+   common styling ends
+   ========================================================================== */
+
+/* ==========================================================================
+   Header starts
+   ========================================================================== */
+
+  .header{
+    width: 100%;
+    border-top: 10px solid #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.58);
+  }
+
+  .header .wrapper {
+    width: calc(71% - 4px);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo a {
+    font-size: 30px;
+    font-weight: 200;
+    color: var(--main-color);
+    text-transform: uppercase;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .header-media-icons, .menu {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+
+  .header-media-icons {
+    font-size: 12px;
+    align-items: flex-end;
+  }
+
+  .search-bar {
+    width: 10%;
+  }
+
+  input[type="search" i] {
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    background-image: url(/assets/images/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  }
+
+  .media-icons {
+    width: 15%;
+  }
+
+  .media-icons img {
+    width: 100%;
+    background-image: url(/assets/images/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 -35px;
+  }
+
+/* ==========================================================================
+   Header endss
+   ========================================================================== */
