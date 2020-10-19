@@ -260,7 +260,7 @@ sub { bottom: -.25em; }
     width: 15%;
   }
 
-  .media-icons img {
+  .media-icons{
     width: 100%;
     background-image: url(/assets/images/sprite.png);
     background-repeat: no-repeat;
