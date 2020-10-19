@@ -216,9 +216,14 @@ sub { bottom: -.25em; }
 
   .header .wrapper {
     width: calc(71% - 4px);
-    padding: 15px 0;
+    padding: 10px 0 0px 0;
     display: flex;
     justify-content: space-between;
+  }
+
+  .logo {
+    padding: 10px 0;
+    margin: 15px 0 10px 0;
   }
 
   .logo a {
@@ -226,6 +231,11 @@ sub { bottom: -.25em; }
     font-weight: 200;
     color: var(--main-color);
     text-transform: uppercase;
+    transition: .3s ease;
+  }
+
+  .logo a:hover {
+    color: #E21A8E;
   }
 
   .navbar {
@@ -239,34 +249,68 @@ sub { bottom: -.25em; }
   }
 
   .header-media-icons {
+    margin-bottom: 15px;
     font-size: 12px;
     align-items: flex-end;
   }
 
+  .header-media-icons li:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  .header-media-icons li:nth-child(2) {
+    margin-left: 20px;
+  }
+
   .search-bar {
-    width: 10%;
+    width: 15%;
   }
 
   input[type="search" i] {
     width: 100%;
     border: none;
-    background-color: rgba(0, 0, 0, 0.58);
+    background-color: #6d6e72;
     background-image: url(/assets/images/search-icon.png);
     background-repeat: no-repeat;
     background-position: 95% 50%;
   }
 
   .media-icons {
-    width: 15%;
-  }
-
-  .media-icons{
-    width: 100%;
+    width: 23%;
+    padding: 2px 0;
     background-image: url(/assets/images/sprite.png);
     background-repeat: no-repeat;
-    background-position: 0 -35px;
+    background-position: 0 -40px;
+    cursor: pointer;
+  }
+
+  .media-icons:hover {background-position: 0 -59px;}
+
+  .menu li a {font-size: 14px;}
+
+  .menu li a:hover {color: #E21A8E;}
+
+  .menu li:nth-child(1) {
+    width: 16px;
+    background-image: url(/assets/images/home-icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .menu li:nth-child(1):hover {
+    background-image: url(/assets/images/sprite.png);
+    background-position: 0 -17px;
+  }
+
+  .menu li:nth-child(2) {margin-left: 16px;}
+
+  .menu li:not(:first-child):not(:last-child)::after {
+    content: '|';
+    margin: 0 8px;
+    display: inline;
+    font-size: 16px;
   }
 
 /* ==========================================================================
-   Header endss
+   Header ends
    ========================================================================== */
