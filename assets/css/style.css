@@ -572,19 +572,28 @@ sub { bottom: -.25em; }
       margin-top: 20px;
     }
 
-    .humburger-menu {
-      width: 70%;
-      display: inline-block;
+    .humburger-menu { display: inline-block; }
+
+    .humburger-menu li {
+      width: 40px;
+      background-color: black;
     }
 
-    .humburger-menu img {
-      width: 23%;
-      padding: 2px 0;
+    .humburger-menu li a {
+      width: 100%;
+      padding: 11px 0;
+      margin: 5px 0 0 9px;
       background-image: url(../images/sprite.png);
       background-repeat: no-repeat;
-      background-position: 0 -40px;
       cursor: pointer;
     }
+
+    .humburger-menu li:first-child a { background-position: 0 -85px; }
+    .humburger-menu li:nth-child(2) a { background-position: -44px -85px; }
+    .humburger-menu li:last-child a { background-position: -88px -85px; }
+    .humburger-menu li:first-child a:focus { background-position: 0 -130px; }
+    .humburger-menu li:nth-child(2) a:focus { background-position: -44px -130px; }
+    .humburger-menu li:last-child a:focus { background-position: -88px -130px; }
 
     .navbar .menu {
       width: 100%;
@@ -597,9 +606,7 @@ sub { bottom: -.25em; }
     }
 
     .navbar .menu li:nth-child(1) {display: none;}
-
     .navbar .menu li { margin: 7px;}
-
     .search-bar, .media-icons, .footbar {display: none;}
 
     footer .wrapper {
