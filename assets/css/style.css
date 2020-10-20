@@ -313,6 +313,10 @@ sub { bottom: -.25em; }
     display: inline;
     font-size: 16px;
   }
+
+  .humburger-menu{
+    display: none;
+  }
 /* ==========================================================================
    Header ends
    ========================================================================== */
@@ -568,6 +572,17 @@ sub { bottom: -.25em; }
     .logo a {
       font-size: 23px;
       margin-top: 20px;
+    }
+
+    /* .humburger-menu {
+      display: block;
+    } */
+
+    .header-media-icons .menu {
+      display: none;
+      /* position: absolute;
+      left: 0;
+      bottom: 0; */
     }
 
     .menu li:not(:first-child):not(:last-child)::after {
