@@ -1,7 +1,12 @@
-var menu = document.querySelector('.menu');
+var showMenu = document.querySelector('.show-menu');
 var burger = document.querySelector('.burger');
 
 burger.addEventListener("click", function() {
-    menu.classList.add("show");
+    
+    if(showMenu.length > 0) {
+        menu.classList.add("hide-menu");    
+    }else{
+        menu.classList.add("show-menu");
+    }
     console.log(menu);
 });
