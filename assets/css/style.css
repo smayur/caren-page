@@ -216,7 +216,7 @@ sub { bottom: -.25em; }
 
   .header .wrapper {
     width: calc(71% - 4px);
-    padding: 10px 0 20px 0;
+    padding: 20px 0 10px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -231,6 +231,7 @@ sub { bottom: -.25em; }
   }
 
   .logo a {
+    margin-top: 20px;
     font-size: 30px;
     font-weight: 200;
     color: var(--main-color);
@@ -320,16 +321,26 @@ sub { bottom: -.25em; }
    Banner starts
    ========================================================================== */
 
-  .banner {
+  .banner { 
     width: 100%;
-    padding: 300px 0;
-    background: url(/assets/images/banner.jpg);
+    position: relative;
+  }
+
+  .banner-image img{
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .banner .wrapper {width: 89%;}
+  .banner .wrapper {
+    width: 89%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   .arrows {
     width: 100%;
@@ -521,9 +532,7 @@ sub { bottom: -.25em; }
     
     .header {border-top: 15px solid #000000;}
 
-    .header .wrapper {
-      width: calc(95% - 4px);
-    }
+    .header .wrapper { width: calc(98% - 4px); }
   
     .logo a {font-size: 25px;}
 
@@ -552,10 +561,14 @@ sub { bottom: -.25em; }
 
    @media only screen and (max-width: 768px) {
 
-    /* .header .wrapper {
-      width: calc(95% - 4px);
-      padding: 5px 0 0 0;
-    } */
+    .header {border-top: 6px solid #000000;}
+
+    .header .wrapper {padding: 2px 0 0 0;}
+
+    .logo a {
+      font-size: 23px;
+      margin-top: 20px;
+    }
 
     .menu li:not(:first-child):not(:last-child)::after {
       margin: 0 4px; 
