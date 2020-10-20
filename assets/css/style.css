@@ -216,7 +216,7 @@ sub { bottom: -.25em; }
 
   .header .wrapper {
     width: calc(71% - 4px);
-    padding: 10px 0 0px 0;
+    padding: 10px 0 20px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -226,8 +226,7 @@ sub { bottom: -.25em; }
   }
 
   .logo {
-    padding: 10px 0;
-    margin: 15px 0 10px 0;
+    margin: 20px 0 0 0;
   }
 
   .logo a {
@@ -268,11 +267,11 @@ sub { bottom: -.25em; }
 
   .search-bar {width: 15%;}
 
-  input[type="search" i] {
+  input[type="search"] {
     width: 100%;
     border: none;
     background-color: #6d6e72;
-    background-image: url(/assets/images/search-icon.png);
+    background-image: url(../images/search-icon.png);
     background-repeat: no-repeat;
     background-position: 95% 50%;
   }
@@ -280,7 +279,7 @@ sub { bottom: -.25em; }
   .media-icons {
     width: 23%;
     padding: 2px 0;
-    background-image: url(/assets/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-repeat: no-repeat;
     background-position: 0 -40px;
     cursor: pointer;
@@ -326,6 +325,8 @@ sub { bottom: -.25em; }
     padding: 300px 0;
     background: url(/assets/images/banner.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .banner .wrapper {width: 89%;}
@@ -386,7 +387,7 @@ sub { bottom: -.25em; }
   .portfolio {width: 100%;}
 
   .portfolio .wrapper {
-    width: calc(66% - 34px);
+    width: calc(66% - 4px);
     padding: 40px 0 50px 0;
   }
 
@@ -494,3 +495,36 @@ sub { bottom: -.25em; }
 /* ==========================================================================
    Footer ends
    ========================================================================== */
+
+/* ==========================================================================
+   max width 995 starts
+   ========================================================================== */
+
+  @media only screen and (max-width: 1024px) {
+    
+    .header {border-top: 15px solid #000000;}
+
+    .header .wrapper {
+      width: calc(95% - 4px);
+      padding: 10px 0 0 0;
+    }
+  
+    .logo {
+      padding: 10px 0;
+      margin: 15px 0 10px 0;
+    }
+  
+    .logo a {
+      font-size: 25px;
+      font-weight: 200;
+      color: var(--main-color);
+      text-transform: uppercase;
+      -webkit-transition: .3s ease;
+      -o-transition: .3s ease;
+      transition: .3s ease;
+    }
+  }
+
+/* ==========================================================================
+   max width 995 ends
+   ========================================================================== */   
