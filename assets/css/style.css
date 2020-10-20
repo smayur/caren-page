@@ -312,6 +312,17 @@ sub { bottom: -.25em; }
     font-size: 16px;
   }
 
+  @media only screen and (max-width: 767px) {
+    .header{
+      border-top: 15px;
+    }
+
+    .header .wrapper {
+      width: calc(95% - 4px);
+      padding: 5px 0 0 0;
+    }
+  }
+
 /* ==========================================================================
    Header ends
    ========================================================================== */
