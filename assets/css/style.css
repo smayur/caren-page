@@ -226,7 +226,8 @@ sub { bottom: -.25em; }
   }
 
   .logo {
-    margin: 20px 0 0 0;
+    display: flex;
+    align-items: flex-end;
   }
 
   .logo a {
@@ -311,18 +312,6 @@ sub { bottom: -.25em; }
     display: inline;
     font-size: 16px;
   }
-
-  @media only screen and (max-width: 767px) {
-    .header{
-      border-top: 15px;
-    }
-
-    .header .wrapper {
-      width: calc(95% - 4px);
-      padding: 5px 0 0 0;
-    }
-  }
-
 /* ==========================================================================
    Header ends
    ========================================================================== */
@@ -508,7 +497,24 @@ sub { bottom: -.25em; }
    ========================================================================== */
 
 /* ==========================================================================
-   max width 995 starts
+   max width 1200 starts
+   ========================================================================== */
+
+   @media only screen and (max-width: 1200px) {
+  
+    .logo a {font-size: 25px;}
+    .media-icons {width: 25%;}
+    .menu li a {font-size: 12px;}
+    /* .footer-media-icons .media-icons {width: 27%;} */
+    /* .footbar .menu li a { font-size: 11px } */
+  }
+
+/* ==========================================================================
+   max width 1200 ends
+   ========================================================================== */
+
+/* ==========================================================================
+   max width 1024 starts
    ========================================================================== */
 
   @media only screen and (max-width: 1024px) {
@@ -517,25 +523,56 @@ sub { bottom: -.25em; }
 
     .header .wrapper {
       width: calc(95% - 4px);
-      padding: 10px 0 0 0;
     }
   
-    .logo {
-      padding: 10px 0;
-      margin: 15px 0 10px 0;
+    .logo a {font-size: 25px;}
+
+    footer .wrapper {
+      width: calc(95% - 4px);
+      padding: 50px 0;
     }
-  
-    .logo a {
-      font-size: 25px;
-      font-weight: 200;
-      color: var(--main-color);
-      text-transform: uppercase;
-      -webkit-transition: .3s ease;
-      -o-transition: .3s ease;
-      transition: .3s ease;
+
+    .copy-rights { font-size: 12px;}
+    .footbar .menu li:not(:first-child):not(:last-child)::after{
+      margin: 0 4px; 
+      font-size: 12px;
     }
+    
+    .footer-media-icons .media-icons {width: 30%;} 
+    .footbar .menu li a { font-size: 11px }
   }
 
 /* ==========================================================================
-   max width 995 ends
+   max width 1024 ends
+   ========================================================================== */
+
+/* ==========================================================================
+   max-width 768 starts
    ========================================================================== */   
+
+   @media only screen and (max-width: 768px) {
+
+    /* .header .wrapper {
+      width: calc(95% - 4px);
+      padding: 5px 0 0 0;
+    } */
+
+    .menu li:not(:first-child):not(:last-child)::after {
+      margin: 0 4px; 
+      font-size: 12px;
+    }
+    
+    .menu li:nth-child(2){margin: 0 0 8px 8px;}
+    .search-bar, .media-icons, .footbar {display: none;}
+
+    footer .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .copy-rights {font-size: initial;}
+  }
+
+/* ==========================================================================
+   max-width 768 ends
+   ========================================================================== */
