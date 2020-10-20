@@ -243,24 +243,19 @@ sub { bottom: -.25em; }
 
   .logo a:hover {color: #E21A8E;}
 
-  .navbar {width: 100%;}
-
   .header-media-icons {
+    margin-bottom: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    text-transform: uppercase;
-  }
-
-  .header-media-icons {
-    margin-bottom: 15px;
-    font-size: 12px;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    font-size: 12px;
+    text-transform: uppercase;
   }
 
   .header-media-icons li:not(:first-child) {margin-left: 5px;}
@@ -300,18 +295,21 @@ sub { bottom: -.25em; }
     cursor: pointer;
   }
 
-  .menu li:nth-child(1):hover {
-    background-image: url(/assets/images/sprite.png);
-    background-position: 0 -17px;
-  }
+  @media only screen and (min-width: 769px) {
 
-  .menu li:nth-child(2) {margin-left: 16px;}
+    .menu li:nth-child(1):hover {
+      background-image: url(/assets/images/sprite.png);
+      background-position: 0 -17px;
+    }
+  
+    .menu li:nth-child(2) {margin-left: 16px;}
 
-  .menu li:not(:first-child):not(:last-child)::after {
-    content: '|';
-    margin: 0 8px;
-    display: inline;
-    font-size: 16px;
+    .menu li:not(:first-child):not(:last-child)::after {
+      content: '|';
+      margin: 0 8px;
+      display: inline;
+      font-size: 16px;
+    }
   }
 
   .humburger-menu{
@@ -574,23 +572,34 @@ sub { bottom: -.25em; }
       margin-top: 20px;
     }
 
-    /* .humburger-menu {
-      display: block;
-    } */
+    .humburger-menu {
+      width: 70%;
+      display: inline-block;
+    }
 
-    .header-media-icons .menu {
-      display: none;
-      /* position: absolute;
+    .humburger-menu img {
+      width: 23%;
+      padding: 2px 0;
+      background-image: url(../images/sprite.png);
+      background-repeat: no-repeat;
+      background-position: 0 -40px;
+      cursor: pointer;
+    }
+
+    .navbar .menu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
       left: 0;
-      bottom: 0; */
+      top: 100%;
+      background-color: black;
     }
 
-    .menu li:not(:first-child):not(:last-child)::after {
-      margin: 0 4px; 
-      font-size: 12px;
-    }
-    
-    .menu li:nth-child(2){margin: 0 0 8px 8px;}
+    .navbar .menu li:nth-child(1) {display: none;}
+
+    .navbar .menu li { margin: 7px;}
+
     .search-bar, .media-icons, .footbar {display: none;}
 
     footer .wrapper {
