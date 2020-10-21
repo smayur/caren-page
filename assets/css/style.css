@@ -186,7 +186,6 @@ sub { bottom: -.25em; }
   }
 
   a {text-decoration: none;}
-
   li {list-style-type: none;}
 
 /* ==========================================================================
@@ -217,8 +216,14 @@ sub { bottom: -.25em; }
   }
 
   .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
   }
 
@@ -236,9 +241,18 @@ sub { bottom: -.25em; }
   .logo a:hover {color: #E21A8E;}
 
   .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
     flex: 2;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
@@ -257,11 +271,9 @@ sub { bottom: -.25em; }
     text-transform: uppercase;
   }
 
-  .header-media-icons li:not(:first-child) {margin-left: 5px;}
-
-  .header-media-icons li:nth-child(2) {margin-left: 20px;}
-
-  .search-bar {width: 15%;}
+  .header-media-icons li:not(:first-child) { margin-left: 5px; }
+  .header-media-icons li:nth-child(2) { margin-left: 20px; }
+  .search-bar { width: 15%; }
 
   input[type="search"] {
     width: 100%;
@@ -273,7 +285,7 @@ sub { bottom: -.25em; }
   }
 
   .media-icons {
-    width: 23%;
+    width: 115px;
     padding: 2px 0;
     background-image: url(../images/sprite.png);
     background-repeat: no-repeat;
@@ -281,11 +293,9 @@ sub { bottom: -.25em; }
     cursor: pointer;
   }
 
-  .media-icons:hover {background-position: 0 -59px;}
-
-  .menu li a {font-size: 14px;}
-
-  .menu li a:hover {color: #E21A8E;}
+  .media-icons:hover { background-position: 0 -59px; }
+  .menu li a { font-size: 14px; }
+  .menu li a:hover { color: #E21A8E; }
 
   .menu li:nth-child(1) {
     width: 16px;
@@ -294,14 +304,14 @@ sub { bottom: -.25em; }
     cursor: pointer;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
 
     .menu li:nth-child(1):hover {
       background-image: url(/assets/images/sprite.png);
       background-position: 0 -17px;
     }
   
-    .menu li:nth-child(2) {margin-left: 16px;}
+    .menu li:nth-child(2) { margin-left: 16px; }
 
     .menu li:not(:first-child):not(:last-child)::after {
       content: '|';
@@ -311,9 +321,7 @@ sub { bottom: -.25em; }
     }
   }
 
-  .humburger-menu{
-    display: none;
-  }
+  .humburger-menu{ display: none; }
 /* ==========================================================================
    Header ends
    ========================================================================== */
@@ -340,6 +348,8 @@ sub { bottom: -.25em; }
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
@@ -361,7 +371,6 @@ sub { bottom: -.25em; }
   }
 
   .arrows .left-arrow a {background-position: 0 -160px;}
-
   .arrows .right-arrow a {background-position: -30px -160px;}
 
   .nav-disk {
@@ -385,7 +394,6 @@ sub { bottom: -.25em; }
   .nav-disk li:nth-child(1) a, 
   .nav-disk li:nth-child(3) a, 
   .nav-disk li:nth-child(4) a {background-image: url(/assets/images/ellipse.png);}
- 
   .nav-disk li:nth-child(2) a {background-image: url(/assets/images/Ellipse2.png);}
 
 /* ==========================================================================
@@ -400,17 +408,15 @@ sub { bottom: -.25em; }
 
   .portfolio .wrapper { 
     width: calc(66% - 23px); 
-    margin-top: 37px;
-    margin-bottom: 62px;
+    margin-top: 3%;
+    margin-bottom: 5%;
   }
 
   .port-images>li:nth-child(1),
   .port-images>li:nth-child(3),
   .port-images>li:nth-child(4),
   .port-images>li:nth-child(5) { width: 32%; }
-
   .port-images>li:nth-child(2) { width: 66%; }
-
   .port-images>li:nth-child(6) { width: 100%; }
 
   .port-images img {
@@ -480,27 +486,6 @@ sub { bottom: -.25em; }
     display: inline-block;
   }
 
-  /* @media only screen and (max-width: 768px) {
-
-    .portfolio .wrapper { width: calc(66% - 13px); }
-
-    .port-images>li:nth-child(1),
-    .port-images>li:nth-child(3),
-    .port-images>li:nth-child(4),
-    .port-images>li:nth-child(5) { width: 32%; }
-
-    .port-images>li:nth-child(2) { width: 66%; }
-
-    .port-images>li:nth-child(6) { width: 100%; }
-
-    .port-images img {
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  } */
-
 /* ==========================================================================
    portfolio ends
    ========================================================================== */
@@ -552,25 +537,12 @@ sub { bottom: -.25em; }
    ========================================================================== */
 
 /* ==========================================================================
-   max width 1280 starts
-   ========================================================================== */
-
-
-/* ==========================================================================
-   max width 1280 ends
-   ========================================================================== */
-
-/* ==========================================================================
    max width 1200 starts
    ========================================================================== */
 
    @media only screen and (max-width: 1200px) {
-  
     .logo a {font-size: 25px;}
-    .media-icons {width: 25%;}
     .menu li a {font-size: 12px;}
-    /* .footer-media-icons .media-icons {width: 27%;} */
-    /* .footbar .menu li a { font-size: 11px } */
   }
 
 /* ==========================================================================
@@ -583,11 +555,9 @@ sub { bottom: -.25em; }
 
   @media only screen and (max-width: 1024px) {
     
-    .header {border-top: 15px solid #000000;}
-
+    .header { border-top: 15px solid #000000; }
     .header .wrapper { width: calc(98% - 4px); }
-  
-    .logo a {font-size: 25px;}
+    .logo a { font-size: 25px; }
 
     footer .wrapper {
       width: calc(95% - 4px);
@@ -595,6 +565,7 @@ sub { bottom: -.25em; }
     }
 
     .copy-rights { font-size: 12px;}
+
     .footbar .menu li:not(:first-child):not(:last-child)::after{
       margin: 0 4px; 
       font-size: 12px;
@@ -624,16 +595,23 @@ sub { bottom: -.25em; }
 
    @media only screen and (max-width: 768px) {
 
-    .header {border-top: 6px solid #000000;}
-    .header .wrapper {padding: 2px 0 0 0;}
+    .header { border-top: 6px solid #000000; }
+    .header .wrapper { padding: 2px 0 0 0; }
 
-    .logo a {
-      font-size: 23px;
-      margin-top: 20px;
+    .logo a { 
+      font-size: 17px;
+      margin-top: 0; 
     }
 
+    .logo, .navbar { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+    .header-media-icons { margin-bottom: 0; }
+
     .humburger-menu { 
+      display: -webkit-box; 
+      display: -ms-flexbox; 
       display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
     }
 
@@ -659,12 +637,16 @@ sub { bottom: -.25em; }
     .humburger-menu li:first-child a:focus { background-position: 0 -130px; }
     .humburger-menu li:nth-child(2) a:focus { background-position: -44px -130px; }
     .humburger-menu li:last-child a:focus { background-position: -88px -130px; }
-
     .navbar .hide-menu { display: none;}
     
     .navbar .show-menu {
       width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       position: absolute;
       left: 0;
@@ -677,7 +659,11 @@ sub { bottom: -.25em; }
     .search-bar, .media-icons, .footbar { display: none; }
 
     footer .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
     }
 
@@ -692,8 +678,15 @@ sub { bottom: -.25em; }
    max-width 540 starts
    ========================================================================== */
    @media only screen and (max-width: 540px) {
-    .logo a { font-size: 16px; }
-    .humburger-menu li { width: 10.5%; }
+    .humburger-menu li { width: 14.5%; }
+
+    .arrows li a { 
+      width: 0px;
+      padding: 16px 10px;
+    }
+
+    .arrows .left-arrow a { background-position: -131px -86px; }
+    .arrows .right-arrow a { background-position: -150px -86px; }
     .port-images>li:nth-child(1),
     .port-images>li:nth-child(3),
     .port-images>li:nth-child(4),
