@@ -595,7 +595,9 @@ sub { bottom: -.25em; }
     .humburger-menu li:nth-child(2) a:focus { background-position: -44px -130px; }
     .humburger-menu li:last-child a:focus { background-position: -88px -130px; }
 
-    .navbar .menu {
+    .navbar .hide-menu { display: none;}
+    
+    .navbar .show-menu {
       width: 100%;
       display: flex;
       flex-direction: column;
